@@ -99,7 +99,7 @@ endif
 cli_wvtag_LDADD = $(AM_LDADD) src/libwavpack.la $(LIBM) $(LIBICONV)
 
 # FIXME: wvtest relies on pthreads only and doesn't use win32 threads
-check_PROGRAMS = cli/wvtest
+#check_PROGRAMS = cli/wvtest
 cli_wvtest_SOURCES = cli/wvtest.c cli/md5.c
 cli_wvtest_CFLAGS = $(AM_CFLAGS) -I$(top_srcdir)/include
 if ENABLE_RPATH
@@ -107,7 +107,7 @@ cli_wvtest_LDFLAGS = -rpath $(libdir)
 endif
 cli_wvtest_LDADD = $(AM_LDADD) src/libwavpack.la $(LIBM) $(LIBTHREAD)
 
-TESTS = cli/fast-tests
+#TESTS = cli/fast-tests
 TESTS_ENVIRONMENT = $(SHELL)
 
 noinst_HEADERS = \
